@@ -1,0 +1,70 @@
+.product-items.widget-product-carousel {
+    .slick-slide {
+        .product-item {
+            &-actions {
+                margin: 0;
+                .actions-primary {
+                    display: block;
+                    .tocart {
+                        width: 100%;
+                        font-weight: 500;
+                        border: none;
+                    }
+                }
+                .actions-secondary {
+                    //styles whistlist
+
+                    .action.tocompare {
+                        display: none;
+                    }
+                }
+            }
+            .product-image-photo {
+                position: relative;
+                width: 100%;
+            }
+            .product-image-wrapper {
+                padding-bottom: 100% !important;
+            }
+            &-name {
+                min-height: 48px;
+                > a {
+                    color: @letter-product;
+                    font-weight: 500;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                }
+            }
+            &-info {
+                max-width: 90%;
+                .price-box {
+                    .special-price {
+                        .price {
+                            color: @red-especial-price;
+                            font-weight: 600;
+                            letter-spacing: -0.36px;
+                        }
+                    }
+                    .old-price {
+                        .price-label {
+                            display: none;
+                        }
+                        .price {
+                            color: @color-black !important;
+                            text-decoration: line-through;
+                            letter-spacing: -0.36px;
+                            font-weight: 500 !important;
+                        }
+                    }
+                    .price-container {
+                        .price {
+                            color: @red-especial-price;
+                            font-weight: 600;
+                            letter-spacing: -0.36px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

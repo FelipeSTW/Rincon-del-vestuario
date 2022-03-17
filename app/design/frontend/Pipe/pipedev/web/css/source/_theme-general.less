@@ -1,0 +1,24 @@
+& when (@media-common = true) {
+    body{
+        color: @primary-color;
+    }
+    
+    .breadcrumbs {
+        .items {
+            font-size: 1.4rem;
+            letter-spacing: 0.56px;
+            color: @color-black;
+        }
+        a {
+            .link-colors()
+        }
+        strong {
+            font-weight: 700;
+        }
+        .item:not(:last-child):after {
+            content: '/';
+            font-size: 3rem;
+            color: @color-black;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <body>
+        <referenceBlock name="header-wrapper">
+
+            <container name="sign-container" htmlTag="div" htmlClass="sign-wrapper" after="minicart">
+                <container name="sign-div" htmlTag="div" htmlClass="sign-container"/>
+            </container>
+
+            <block class="Magento\Framework\View\Element\Html\Link" name="search-link" before="wishlist-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">search-link</argument>
+                    <argument name="class" xsi:type="string">search-link</argument>
+                </arguments>
+            </block>
+            
+            <block class="Magento\Framework\View\Element\Html\Link" name="wishlist-link" before="minicart">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">wishlist</argument>
+                    <argument name="path" xsi:type="string" translate="true">wishlist</argument>
+                    <argument name="class" xsi:type="string">wishlist-link</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+
+        <move element="authorization-link-login" destination="sign-div" after="-"/>
+        <move element="register-link" destination="sign-div" after="-"/>
+        <move element="top.search" destination="header-wrapper" after="catalog.topnav"/>
+
+    </body>
+</page>
